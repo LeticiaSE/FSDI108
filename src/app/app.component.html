@@ -1,4 +1,5 @@
-<h3>Todo List</h3>
+<!--
+  <h3>Todo List</h3>
 
 <div class="form">
   <input type="text" placeholder="What to do?" [(ngModel)]="todoText">
@@ -11,8 +12,18 @@ You have {{ todoList.length }} ToDos
   <li *ngFor="let todo of todoList">{{todo}}</li>
 </ul>
 
-<router-outlet></router-outlet>
+<hr>
+<app-temp-calculator></app-temp-calculator>-->
 
+
+<app-nav-bar></app-nav-bar>
+
+<router-outlet>
+  <!-- Here, ng wiññ render your page -->
+</router-outlet>
+
+<br>
+FOOTER HERE
 
 <!-- ctrl + p -->
 <!-- cmd + p -->
