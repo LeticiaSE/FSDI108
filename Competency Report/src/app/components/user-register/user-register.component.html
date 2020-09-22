@@ -1,0 +1,118 @@
+<!-- about page -->
+<!-- ng g c /components/about-->
+
+<!--
+  User:
+  id
+  userName
+  email
+  password
+  retype password
+
+  security question
+  security question answer
+
+  first name
+  last name
+  employee num
+  full address
+
+  bootstrap 4 form builder
+
+  {{model | json}}
+-->
+
+<form class="col-md-6 offset-3">
+  <h3>Register new User</h3>
+  <div class="form-group row">
+    <label for="txtUserName" class="col-4 col-form-label">User Name</label>
+    <div class="col-8">
+      <input placeholder="required" type="text" class="form-control" [(ngModel)]="model.userName" name="userName">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="txtEmail" class="col-4 col-form-label">Email</label>
+    <div class="col-8">
+      <input placeholder="required" type="text" class="form-control" [(ngModel)]="model.email" name="email">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="txtPassword" class="col-4 col-form-label">Password</label>
+    <div class="col-8">
+      <input placeholder="required" type="password" class="form-control" [(ngModel)]="model.password" name="password">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="txtRetypePassword" class="col-4 col-form-label">Retype Password</label>
+    <div class="col-8">
+      <input type="password" class="form-control" [(ngModel)]="retypePassword" name="pass2">
+
+      <div *ngIf="this.model.password != retypePassword" class="alert alert-danger">
+        Password and Retype password doesn´t match!
+      </div>
+
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-4 col-form-label">Security Question</label>
+    <div class="col-8">
+      <input type="text" class="form-control" [(ngModel)]="model.securityQuestion" name="securityQuestion">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="txtSecurityA" class="col-4 col-form-label">Security Answer</label>
+    <div class="col-8">
+      <input type="text" class="form-control" [(ngModel)]="model.securityQuestionAnswer" name="securityQuestionAnswer">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-group row">
+    <label for="txtEmployeeN" class="col-4 col-form-label">Employee Number</label>
+    <div class="col-8">
+      <input placeholder="required" type="number" class="form-control" [(ngModel)]="model.employeeNumber"
+        name="employeeNumber">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="txtFirstName" class="col-4 col-form-label">First Name</label>
+    <div class="col-8">
+      <input type="text" class="form-control" [(ngModel)]="model.firstName" name="firstName">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="txtLastName" class="col-4 col-form-label">Last Name</label>
+    <div class="col-8">
+      <input type="text" class="form-control" [(ngModel)]="model.lastName" name="lastName">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="txtAddress" class="col-4 col-form-label">Address</label>
+    <div class="col-8">
+      <input type="text" class="form-control" [(ngModel)]="model.fullAddress" name="fullAddress">
+    </div>
+  </div>
+
+  <hr>
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button [disabled]="shouldSaveDisable()" (click)="saveUser()" name="submit" type="button"
+        class="btn btn-primary">Save
+        user</button>
+
+      <div *ngIf="showAlert" class="alert alert-success">
+        The user has been registered..!!
+      </div>
+
+    </div>
+  </div>
+</form>
