@@ -7,20 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  todoText = "";
-  todoList = [];
 
-  addTodo() {
-    console.log("Add todo", this.todoText);
-    this.todoList.push(this.todoText);
-    this.todoText = "";
-  }
 }
 
 
-/*
-
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -36,13 +27,9 @@ export class AppComponent {
     var x = "";
     console.log("Hello there..!");
     this.name = "Name has changed!";
-
   }
-
   increaseCounter(){
     this.count += 1;
   }
-
-}
-*/
+}*/
 

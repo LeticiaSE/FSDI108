@@ -9,6 +9,8 @@ import { TempCalculatorComponent } from './components/temp-calculator/temp-calcu
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { AboutComponent } from './components/about/about.component';
+import { UserRegisterComponent } from './components/user-register/user-register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     TempCalculatorComponent,
     TodoListComponent,
     HomePageComponent,
-    NavBarComponent
+    NavBarComponent,
+    AboutComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
